@@ -42,6 +42,7 @@ header li a {
 .articles article img {
     /*height: 180px; isso e um comentario*/ 
     width: 100%;
+    height: 260px;
 }
 
 .articles article {
@@ -102,3 +103,18 @@ section h2 {
     background-color: rgba(0, 0, 255, 0.438);
 }
 
+#cars {
+    background-color: rgba(200, 0, 0, 0.1)
+}
+
+#cars .articles article a {
+    background-color: rgba(200, 0, 0, 0.658);
+}
+
+#technology {
+    background-color: rgba(200, 90, 0, 0.295);
+}
+
+#technology .articles article a {
+    background-color: rgba(58, 26, 0, 0.295);
+}
