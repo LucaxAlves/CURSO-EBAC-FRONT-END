@@ -5,34 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-    <body>
-        <h1>Formulario de validação</h1>
-        <form id="validationForm">
-            <label for="campoA">campoA:</label>
-            <input type="number" id="campoA" name="campoA" required>
-            <br><br>
-            <label for="campoB">campoB:</label>
-            <input type="number" id="campoB" name="campoB" required>
-            <br><br>
-            <button type="submit">subemter</button>
-            <div id="message" class="message"></div>
-            <script>
-                document.getElementById('validatioform').addEventListener('submit', function(event){
-                    event.preventDefault();
+<body>
+    <form id="MyForm">
+        <label for="CampoA">Campo A:</label>
+        <input type="number" id="CampoA" name="CampoA" required>
+        
+        <label for="CampoB">Campo B:</label>
+        <input type="number" id="CampoB" name="CampoB" required>
+        
+        <button type="submit">resultado</button>
+        <div id="message"></div>
+    </form>
+    <script>
+        document.getElementById('MyForm').addEventListener('submit', function(event) {
+    event.preventDefault(); //Impede o envio padrão do formulário
 
-                    const campoA = parseFloat(document.getElementById('campoA').value);
-                    const campoB = parseFloat(document.getElementById('campoB').value);
-                    const messageDiv = document.getElementById('message');
+    //obtém os valores do campos
+    var campoA = parseFloat(document.getElementById('CampoA').value);
+    var campoB = parseFloat(document.getElementById('CampoB').value);
+    var messageDiv = document.getElementById('message');
 
-                    if (campoB > campoA) {
-                        messageDiv.textContent = 'Formulário válido! O número B é maior que o número A.';
-                        messageDiv.className = 'message success';
-                    } else {
-                        messageDiv.textContent = 'Formulário inválido! O número B deve ser maior que o número A.';
-                        messageDiv.className = 'message error';
-                    }
-                });
-            </script>
-        </form>
-    </body>
+// verifca se o campo B é maior que o campo A 
+    if (campoB > campoA ) {
+        messageDiv.textContent = 'formulário válido: Campo B é maior que Campo A.';
+        messageDiv.style.color = 'green';
+    } else {
+        messageDiv.textContent = 'formulário inválido: Campo b deve ser maior que Campo A.';
+        messageDiv.style.color = 'red'
+    }
+});
+
+    </script>
+</body>
 </html>
