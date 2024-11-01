@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style src="./main.css"></style>
-    <script src="./main.js"></script>
+    <link rel="stylesheet" href="main.css"> </head>
 
 </head>
 <body>
+
     <div class="container">
-        <div class="container">
-            <h2>Lista de Tarefas</h2>
-            <!-- Formulário para adicionar tarefas -->
-            <form id="taskForm">
-                <input type="text" id="taskInput" placeholder="Digite uma tarefa" required>
-                <button type="submit" id="addButton">Adicionar Tarefa</button>
-            </form>
-            
-            <!-- Lista de tarefas não ordenada -->
-            <ul id="taskList"></ul>
-        </div>
+        <h1>Lista de Tarefas</h1>
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Adicionar nova tarefa" required>
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul id="taskList"></ul>
     </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
